@@ -22,5 +22,11 @@ class Plugin extends PluginBase
             'icon'        => 'icon-leaf'
         ];
     }
+    public function registerComponents()
+    {
+        return [
+            'cptmeatball\pricetables\Components\pricetable' => 'PriceTable'
+        ];
+    }
 
 }
