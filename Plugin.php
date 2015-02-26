@@ -1,7 +1,7 @@
 <?php namespace Cptmeatball\Pricetables;
 
 use System\Classes\PluginBase;
-
+use Backend;
 /**
  * pricetables Plugin Information File
  */
@@ -23,4 +23,29 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerComponents()
+    {
+        return [
+            'Cptmeatball\Pricetables\Components\PriceTable' => 'PriceTable'
+        ];
+    }
+
+    public function registerNavigation()
+    {
+        return [
+            'pricetables' => [
+                'label' => "Pricetables",
+                'url' => Backend::url('cptmeatball/pricetables/pricetables'),
+                'icon' => 'icon-table',
+
+                'sideMenu' => [
+                    'currency' => [
+                        'label' => "currency",
+                        'icon'  => 'icon-money',
+                        'url'   => Backend::url('cptmeatball/pricetables/currency')
+                    ]
+                ]
+            ]
+        ];
+    }
 }
