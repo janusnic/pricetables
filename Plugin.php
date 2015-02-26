@@ -16,16 +16,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Price Tables',
-            'description' => 'A convenient plugin that let users manage price tables from the backend',
+            'name'        => 'pricetables',
+            'description' => 'No description provided yet...',
             'author'      => 'cptmeatball',
             'icon'        => 'icon-leaf'
-        ];
-    }
-    public function registerComponents()
-    {
-        return [
-            'cptmeatball\pricetables\Components\pricetable' => 'PriceTable'
         ];
     }
 

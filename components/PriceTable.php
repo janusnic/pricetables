@@ -17,4 +17,5 @@ class PriceTable extends ComponentBase
     {
         return [];
     }
+
 }
