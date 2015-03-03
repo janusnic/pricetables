@@ -1,10 +1,15 @@
 <?php namespace Cptmeatball\Pricetables\Controllers;
 
 use Backend\Classes\Controller;
+use Lang;
 use BackendMenu;
+use Cptmeatball\Pricetables\Models\Pricetable;
 
 class Price extends Controller {
 
+	public $implement = ['Backend.Behaviors.FormController','Backend.Behaviors.ListController'];
+	public $listConfig = 'list_config.yaml';
+	public $formConfig = 'form_config.yaml';
 
 	public function __construct()
 	{
@@ -15,7 +20,6 @@ class Price extends Controller {
 
 	public function index()
 	{
-		$this->pageTitle = 'Prices';
-
+		$this->asExtension('ListController')->index();
 	}
 }
