@@ -3,6 +3,14 @@
 # ===================================
 
 columns:
-    id:
+    ID:
         label: ID
-        searchable: true
+        invisible: true
+    title:
+        label: Tabel Naam
+        type: text
+    description:
+        label: Tabel beschrijving
+        type: text
+    updated_at:
+        label: Laatst aangepast

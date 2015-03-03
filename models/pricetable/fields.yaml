@@ -3,6 +3,9 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    title:
+        label: Tabel Naam
+        type: text
+    description:
+        label: Tabel beschrijving
+        type: text
