@@ -1,0 +1,17 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Blog Category
+form: ~/plugins/cptmeatball/pricetables/models/pricetable/fields.yaml
+modelClass: Cptmeatball\Pricetables\Models\Pricetable
+
+create:
+    title: Create New Pricetable
+    redirect: cptmeatball/pricetables/price/update/:id
+    redirectClose: cptmeatball/pricetables/price
+
+update:
+    title: Edit Pricetable
+    redirect: cptmeatball/pricetables/price
+    redirectClose: cptmeatball/pricetables/price
