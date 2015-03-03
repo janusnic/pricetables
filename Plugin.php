@@ -45,26 +45,26 @@ class Plugin extends PluginBase
     {
         return [
             'pricetables' => [
-                'label' => "Pricetables",
+                'label' => 'cptmeatball.pricetables::lang.plugin.name',
                 'url' => Backend::url('cptmeatball/pricetables/price'),
                 'permissions' => ['cptmeatball.pricetables'],
                 'icon' => 'icon-table',
                     
                 'sideMenu' => [
                     'price' => [
-                        'label' => 'price',
+                        'label' => 'cptmeatball.pricetables::lang.navigation.title.price',
                         'icon'  => 'icon-money',
                         'url'   => Backend::url('cptmeatball/pricetables/price'),
                         'permissions' => ['cptmeatball.pricetables.access_prices']
                     ],
                     'category' => [
-                        'label' => 'category',
+                        'label' => 'cptmeatball.pricetables::lang.navigation.title.category',
                         'icon'  => 'icon-money',
                         'url'   => Backend::url('cptmeatball/pricetables/category'),
                         'permissions' => ['cptmeatball.pricetables.access_categories']
                     ],
                     'currency' => [
-                        'label' => 'currency',
+                        'label' => 'cptmeatball.pricetables::lang.navigation.title.currency',
                         'icon'  => 'icon-money',
                         'url'   => Backend::url('cptmeatball/pricetables/currency'),
                         'permissions' => ['cptmeatball.pricetables.access_currency']
