@@ -2,10 +2,15 @@ list: ~/plugins/cptmeatball/pricetables/models/pricetable/columns.yaml
 
 modelClass: Cptmeatball\Pricetables\Models\Pricetable
 
-title: test
+title: Pricetables
 
 defaultSort:
     column: updated_at
     direction: desc
 
 recordUrl: cptmeatball/pricetables/price/update/:id
+
+showCheckboxes: true
+
+toolbar:
+    buttons: toolbar

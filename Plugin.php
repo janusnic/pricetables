@@ -18,8 +18,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'pricetables',
-            'description' => 'No description provided yet...',
+            'name'        => 'cptmeatball.pricetables::lang.plugin.name',
+            'description' => 'cptmeatball.pricetables::lang.plugin.description',
             'author'      => 'cptmeatball',
             'icon'        => 'icon-leaf'
         ];

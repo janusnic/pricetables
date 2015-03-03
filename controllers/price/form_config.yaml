@@ -2,16 +2,19 @@
 #  Form Behavior Config
 # ===================================
 
-name: Blog Category
+name: Pricetables
 form: ~/plugins/cptmeatball/pricetables/models/pricetable/fields.yaml
-modelClass: Cptmeatball\Pricetables\Models\Pricetable
+modelClass: Cptmeatball\Pricetables\Models\PriceTable
+defaultRedirect: Cptmeatball\Pricetables\Price
 
 create:
     title: Create New Pricetable
     redirect: cptmeatball/pricetables/price/update/:id
     redirectClose: cptmeatball/pricetables/price
+    flashSave: cptmeatball.pricetables::lang.message.price.create
 
 update:
     title: Edit Pricetable
     redirect: cptmeatball/pricetables/price
     redirectClose: cptmeatball/pricetables/price
+    flashSave: cptmeatball.pricetables::lang.message.price.update

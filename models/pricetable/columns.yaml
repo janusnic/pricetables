@@ -3,14 +3,13 @@
 # ===================================
 
 columns:
-    ID:
+    id:
         label: ID
-        invisible: true
     title:
-        label: Tabel Naam
+        label: cptmeatball.pricetables::lang.table.name
         type: text
     description:
-        label: Tabel beschrijving
+        label: cptmeatball.pricetables::lang.table.description
         type: text
     updated_at:
-        label: Laatst aangepast
+        label: cptmeatball.pricetables::lang.table.last_edited
