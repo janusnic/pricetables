@@ -1,6 +1,6 @@
 list: ~/plugins/cptmeatball/pricetables/models/pricetable/columns.yaml
 
-modelClass: Cptmeatball\Pricetables\Models\Pricetable
+modelClass: Cptmeatball\Pricetables\Models\PriceTable
 
 title: Pricetables
 
