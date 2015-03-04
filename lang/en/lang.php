@@ -29,7 +29,7 @@ return [
 		'create_and_close' => 'Create and Close',
 		'cancel' => 'Cancel',
 		'delete' => 'Delete',
-		'delete_confirmation' => 'Are you sure you want to delete this?',
+		'confirmation' => 'Are you sure you want to do this?',
 		'update' => 'Update',
 		'update_and_close' => 'Update and Close',
 		'updating_table' => 'Updating Table...'
