@@ -3,6 +3,7 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    description:
+        label: description
+    price:
+        label: price

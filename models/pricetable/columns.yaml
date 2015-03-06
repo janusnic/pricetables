@@ -4,10 +4,10 @@
 
 columns:
     title:
-        label: cptmeatball.pricetables::lang.table.name
+        label: cptmeatball.pricetables::lang.table.pricetable.name
         type: text
     description:
-        label: cptmeatball.pricetables::lang.table.description
+        label: cptmeatball.pricetables::lang.table.pricetable.description
         type: text
     updated_at:
-        label: cptmeatball.pricetables::lang.table.last_edited
+        label: cptmeatball.pricetables::lang.table.pricetable.last_edited

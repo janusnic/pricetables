@@ -21,7 +21,7 @@ class Price extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['id','description', 'price'];
 
     /**
      * @var array Relations

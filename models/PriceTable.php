@@ -21,13 +21,15 @@ class PriceTable extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['price', 'description'];
 
     /**
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [];
+    public $hasMany = [
+        'prices' => ['Cptmeatball\Pricetables\Models\Price']
+    ];
     public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];
@@ -35,5 +37,14 @@ class PriceTable extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function getCurrencyOptions(){
+        $json = json_decode(file_get_contents(__DIR__.'/../assets/json/currencies.json', true));
+
+        foreach($json as $key => $currency){
+            $currencies[$currency->code] = $currency->symbol_native." ($currency->code)";
+        }
+        return $currencies;
+    }
 
 }

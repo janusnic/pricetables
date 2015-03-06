@@ -3,6 +3,6 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    title:
+        label: cptmeatball.pricetables::lang.table.categories.name
+        type: text
