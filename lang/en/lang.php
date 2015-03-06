@@ -6,9 +6,23 @@ return [
 		'description' => 'The simple price table solution for OctoberCMS'
 	],
 	'table' => [
-		'name' => 'Table Name',
-		'description' => 'Table Description',
-		'last_edited' => 'Last Edited'
+		'pricetable' => [
+			'name' => 'Table Name',
+			'description' => 'Table Description',
+			'last_edited' => 'Last Edited',
+			'currency' => 'Currency',
+			'price_description' => 'Price Description'
+
+		],
+		'categories' => [
+			'name' => 'Category Name'
+		],
+		'price' => [
+			'price' => 'Price',
+			'description' => 'Description'
+		],
+		'no_records' => 'No records found'
+
 	],
 	'navigation' => [
 		'title' => [
