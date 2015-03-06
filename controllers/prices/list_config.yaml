@@ -8,7 +8,8 @@ defaultSort:
     column: updated_at
     direction: desc
 
-recordUrl: cptmeatball/pricetables/price/update/:id
+recordUrl: cptmeatball/pricetables/prices/update/:id
+noRecordsMessage: cptmeatball.pricetables::lang..no_records
 
 showCheckboxes: true
 

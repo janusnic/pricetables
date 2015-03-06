@@ -2,7 +2,12 @@
 #  Form Field Definitions
 # ===================================
 
-fields:
-    id:
-        label: ID
-        disabled: true
+tabs:
+    fields:
+        title:
+            tab: meuk
+            type: text
+            label: meuk2
+        description:
+            tab: meuk2
+            label: ruk

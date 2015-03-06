@@ -2,6 +2,8 @@
 
 use Cms\Classes\ComponentBase;
 use Db;
+use Cptmeatball\Pricetables\Models\PriceTable as PriceTables;
+use Cptmeatball\Pricetables\Models\Price;
 
 class PriceTable extends ComponentBase
 {
@@ -17,17 +19,30 @@ class PriceTable extends ComponentBase
     public function defineProperties()
     {
         return [
-            'Table'    => [
+            'name'     => [
+                'title'         => 'Name',
+                'type'          => 'string'
+            ],
+            'table'    => [
                 'title'         => 'PriceTable',
                 'type'          => 'dropdown',
-                'placeholder'   => 'Select a table'
+                'placeholder'   => 'Select a table',
             ]
         ];
     }
 
     public function getTableOptions()
-    {
-        
-        return Db::table('cptmeatball_pricetables_price_tables')->lists('title');
+    {   
+        return PriceTables::select('id', 'title')->orderBy('title')->get()->lists('title', 'id');
+    }
+
+    public function onRun(){
+        $table = PriceTables::where('id', '=', $this->property('table'))->first();
+        $json = json_decode(file_get_contents(__DIR__.'/../assets/json/currencies.json', true));
+    
+        $this->page['id'] = $this->property['name'];
+        $this->page['table'] = $table;
+        $this->page['currency'] = $json->{$table->currency}->symbol_native;
+        $this->page['prices'] = Price::where('price_table_id', '=', $this->property('table'))->get();
     }
 }

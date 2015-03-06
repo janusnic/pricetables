@@ -1,22 +1,14 @@
+ <h2>{{ table.title }}</h2>
  <table class="table table-striped">
     <tr>
-        <th>Tablehead column 1</th>
-        <th>Price</th>
+        <th>{{ table.description }}</th>
+        <th>{{ table.price_description }} </th>
     </tr>
+    {% for price in prices %}
     <tr>
-        <td>Row Description</td>
-        <td>Price</td>
+        <td>{{ price.description }}</td>
+        <td>{{ currency }}&nbsp;{{ price.price }}</td>
     </tr>
-    <tr>
-        <td>Row Description</td>
-        <td>Price</td>
-    </tr>
-    <tr>
-        <td>Row Description</td>
-        <td>Price</td>
-    </tr>
-    <tr>
-        <td>Row Description</td>
-        <td>Price</td>
-    </tr>
+    {% endfor %}
 </table>
+

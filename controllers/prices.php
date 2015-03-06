@@ -5,22 +5,27 @@ use Lang;
 use Flash;
 use BackendMenu;
 use Cptmeatball\Pricetables\Models\Pricetable;
+use Cptmeatball\Pricetables\Models\Price;
 
-class Price extends Controller {
+class Prices extends Controller {
 
-	public $implement = ['Backend.Behaviors.FormController','Backend.Behaviors.ListController'];
+	public $implement = ['Backend.Behaviors.FormController',
+                         'Backend.Behaviors.ListController',
+                         'Backend.Behaviors.RelationController'];
+
 	public $listConfig = 'list_config.yaml';
 	public $formConfig = 'form_config.yaml';
+    public $relationConfig = 'config_relation.yaml';
 
 	public function __construct()
 	{
 		parent::__construct();
 
-		BackendMenu::setContext('Cptmeatball.Pricetables', 'pricetables', 'price');
+		BackendMenu::setContext('Cptmeatball.Pricetables', 'pricetables', 'prices');
 	}
 
 	public function index()
-	{
+	{ 
 		$this->asExtension('ListController')->index();
 	}
 
