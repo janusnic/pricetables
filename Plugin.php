@@ -46,31 +46,24 @@ class Plugin extends PluginBase
         return [
             'pricetables' => [
                 'label' => 'cptmeatball.pricetables::lang.plugin.name',
-                'url' => Backend::url('cptmeatball/pricetables/price'),
+                'url' => Backend::url('cptmeatball/pricetables/prices'),
                 'permissions' => ['cptmeatball.pricetables'],
                 'icon' => 'icon-table',
                     
                 'sideMenu' => [
-                    'price' => [
+                    'prices' => [
                         'label' => 'cptmeatball.pricetables::lang.navigation.title.price',
                         'icon'  => 'icon-money',
-                        'url'   => Backend::url('cptmeatball/pricetables/price'),
+                        'url'   => Backend::url('cptmeatball/pricetables/prices'),
                         'permissions' => ['cptmeatball.pricetables.access_prices']
                     ],
-                    'category' => [
-                        'label' => 'cptmeatball.pricetables::lang.navigation.title.category',
-                        'icon'  => 'icon-money',
-                        'url'   => Backend::url('cptmeatball/pricetables/category'),
-                        'permissions' => ['cptmeatball.pricetables.access_categories']
-                    ],
-                    'currency' => [
-                        'label' => 'cptmeatball.pricetables::lang.navigation.title.currency',
-                        'icon'  => 'icon-money',
-                        'url'   => Backend::url('cptmeatball/pricetables/currency'),
-                        'permissions' => ['cptmeatball.pricetables.access_currency']
-                    ]
+                    // 'categories' => [
+                    //     'label' => 'cptmeatball.pricetables::lang.navigation.title.category',
+                    //     'icon'  => 'icon-money',
+                    //     'url'   => Backend::url('cptmeatball/pricetables/categories'),
+                    //     'permissions' => ['cptmeatball.pricetables.access_categories']
+                    // ]                
                 ]
-
             ]
         ];
     }
